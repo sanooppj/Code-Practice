@@ -1,5 +1,5 @@
-s1 = input()
-s2 = input()
+s1 = input().lower()
+s2 = input().lower().replace(" ", "")
 
 if len(s1) != len(s2):
     print("NO")
@@ -8,7 +8,7 @@ else:
     count2 = {}
 
     for ch in s1:
-        if ch in count1:
+        if ch.isalpha() in count1:
             count1[ch] += 1
         else:
             count1[ch] = 1
